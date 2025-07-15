@@ -1,0 +1,130 @@
+/* FONDO GENERAL */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+  color: #003344;
+}
+
+/* TÍTULO PRINCIPAL */
+h1 {
+  text-align: center;
+  color: #01579b;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+/* CONTENEDOR DE CADA SEMESTRE */
+.semestre {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #81d4fa;
+  border-left: 10px solid #00acc1;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.semestre:hover {
+  transform: scale(1.01);
+}
+
+/* TÍTULO DE CADA SEMESTRE */
+.semestre h2 {
+  margin-top: 0;
+  color: #00796b;
+  font-size: 1.5em;
+  border-bottom: 1px solid #b2dfdb;
+  padding-bottom: 5px;
+}
+
+/* GRILLA DE RAMOS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+/* ESTILO DE CADA RAMO */
+.ramo {
+  background-color: #4dd0e1;
+  padding: 12px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  color: #004d40;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: 0.2s ease;
+  word-wrap: break-word;
+}
+
+.ramo:hover {
+  background-color: #26c6da;
+  transform: scale(1.05);
+}
+
+/* MODAL DE INFO */
+#info-box {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  border: 2px solid #00acc1;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  width: 90%;
+  max-width: 400px;
+  z-index: 9999;
+}
+
+.hidden {
+  display: none;
+}
+
+/* BOTÓN DE CIERRE */
+button {
+  background-color: #00acc1;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #00838f;
+}
+
+/* 📱 RESPONSIVE AJUSTES */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .semestre {
+    padding: 15px;
+  }
+
+  .ramo {
+    font-size: 0.95em;
+    padding: 10px;
+  }
+
+  #info-box {
+    bottom: 10px;
+    width: 95%;
+    padding: 15px;
+  }
+}
